@@ -125,7 +125,7 @@ fieldset {
 <div class="container">
     <form action="mailto:donald.manning@plus3it.com" method="post" enctype="text/plain">
       <h3>Service Request Form</h3>
-      <h4>Please access the following if you do not know your Keycloak UserName: <a>https://sso.xc.nga.mil/auth/realms/sentinels-pulsar/account</a></h4>
+      <h4>Please access the following if you do not know your Keycloak UserName: <a href="https://sso.xc.nga.mil/auth/realms/sentinels-pulsar/account"></a></h4>
       <fieldset>
         <input placeholder="Team Name" type="text" tabindex="1" required autofocus>
       </fieldset>
@@ -141,9 +141,7 @@ fieldset {
       <fieldset>
         <textarea placeholder="Type your request justification...." tabindex="5" required></textarea>
       </fieldset>
-      <fieldset>
-        <button name="submit" type="submit" value="Send" data-submit="...Sending">Submit</button>
-      </fieldset>
+      <input type="submit" value="Send">
     </form>
 </body>
 </div>
