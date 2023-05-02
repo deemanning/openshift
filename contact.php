@@ -7,7 +7,11 @@
          $message .= $_POST['keycloakusername'];
          $message .= $_POST['adminusers'];
          
-         $retval = mail ($to,$subject,$message);
+         $header = "From:abc@somedomain.com \r\n";
+         $header .= "MIME-Version: 1.0\r\n";
+         $header .= "Content-type: text/html\r\n";
+
+         $retval = mail ($to,$subject,$message,$header);
          
          if( $retval == true ) {
             echo "Message sent successfully...";
