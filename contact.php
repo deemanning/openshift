@@ -1,12 +1,22 @@
 <?php
-if (isset($_POST['donald.manning@plus3it.com']) && !empty($_POST['donald.manning@plus3it.com'])) {
-  $subject = "New User request: $_POST['New User request']";
-  $message = $_POST[The following request is required for the following user.];
-  $headers = From: info@website.com . "\r\n" .
-             'Reply-To: ' . $_POST['donald.manning@plus3it.com']. "\r\n" .
-             'X-Mailer: PHP/' . phpversion();
-
-  mail(info@example.com, $subject, $message, $headers);
-
-  die(Thank you for your email);
-}
+         $to = "donald.manning@plus3it.com";
+         $subject = "New User Request";
+         
+         $message = $_POST['Team Name'];
+         $message .= $_POST['GPOC Name'];
+         $message .= $_POST['Keycloak UserName'];
+         $message .= $_POST['Admin Users'];
+         
+         $header = "From:abc@somedomain.com \r\n";
+         $header .= "Cc:afgh@somedomain.com \r\n";
+         $header .= "MIME-Version: 1.0\r\n";
+         $header .= "Content-type: text/html\r\n";
+         
+         $retval = mail ($to,$subject,$message,$header);
+         
+         if( $retval == true ) {
+            echo "Message sent successfully...";
+         }else {
+            echo "Message could not be sent...";
+         }
+?>
