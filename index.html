@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
+  <head>
+    <style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
 * {
@@ -120,31 +120,31 @@ fieldset {
  color:#888;
 }
 </style>
-</head>
-<body>
-<div class="container">
-    <form action="contact.php" method="post" enctype="text/plain">
-      <h3>Service Request Form</h3>
-      <h4>Please access the following if you do not know your Keycloak UserName: <a href="https://sso.xc.nga.mil/auth/realms/sentinels-pulsar/account">Visit Keycloak Site</a></h4>
-      <fieldset>
-        <input placeholder="Team Name" type="text" tabindex="1" required autofocus>
-      </fieldset>
-      <fieldset>
-        <input placeholder="GPOC Name" type="text" tabindex="2" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Keycloak UserName" type="text" tabindex="3" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Admin Users" type="text" tabindex="4" required>
-      </fieldset>
-      <fieldset>
-        <textarea placeholder="Type your request justification...." tabindex="5" required></textarea>
-      </fieldset>
-      <fieldset>
-        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-      </fieldset>
-    </form>
-</body>
-</div>
+ </head>
+   <body>
+    <div class="container">
+       <form id="contact" action="contact.php" method="post">
+         <h3>Service Request Form</h3>
+         <h4>Please access the following if you do not know your Keycloak UserName: <a href="https://sso.xc.nga.mil/auth/realms/sentinels-pulsar/account">Visit Keycloak Site</a></h4>
+         <fieldset>
+           <input placeholder="Team Name" type="text" tabindex="1" required autofocus>
+         </fieldset>
+         <fieldset>
+           <input placeholder="GPOC Name" type="text" tabindex="2" required>
+         </fieldset>
+         <fieldset>
+           <input placeholder="Keycloak UserName" type="text" tabindex="3" required>
+         </fieldset>
+         <fieldset>
+           <input placeholder="Admin Users" type="text" tabindex="4" required>
+         </fieldset>
+         <fieldset>
+           <textarea placeholder="Type your request justification...." tabindex="5" required></textarea>
+         </fieldset>
+         <fieldset>
+           <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+         </fieldset>
+        </form>
+	 </div>
+    </body>
 </html>
