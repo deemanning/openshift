@@ -1,36 +1,14 @@
 <?php
-//Import PHPMailer classes into the global namespace
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
-
-try {
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
-    $mail->isSMTP();                                            
-    $mail->Host       = 'smtp.example.com';                     
-    $mail->SMTPAuth   = false;                                   
-    $mail->Username   = 'user@example.com';                     
-    $mail->Password   = 'secret';                               
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
-    $mail->Port       = 465;                                    
-
-    //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('donald.manning@plus3it.com', 'Test User');     
-    $mail->addAddress('ellen@example.com');               
-    $mail->addReplyTo('info@example.com', 'Information');   
-
-    //Content
-    $mail->isHTML(true);                                  
-    $mail->Subject = 'New Service Request';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+ini_set( 'display_errors', 1 );
+error_reporting( E_ALL );
+$from = "mymail@myawesomedomain.tld";
+$to = "donald.manning@plus3it.com";
+$subject = "Checking PHP mail";
+$message = "PHP mail works just fine";
+$headers = "From:" . $from;
+if(mail($to,$subject,$message, $headers)) {
+    echo "The email message was sent.";
+} else {
+    echo "The email message was not sent.";
 }
+?>
