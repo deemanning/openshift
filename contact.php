@@ -15,7 +15,7 @@ try {
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
     $mail->isSMTP();                                            
     $mail->Host       = 'smtp.example.com';                     
-    $mail->SMTPAuth   = true;                                   
+    $mail->SMTPAuth   = false;                                   
     $mail->Username   = 'user@example.com';                     
     $mail->Password   = 'secret';                               
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
