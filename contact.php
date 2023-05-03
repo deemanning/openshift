@@ -2,35 +2,31 @@
 //Import PHPMailer classes into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+
+//This should be done in your php.ini, but this is how to do it if you don't have access to that
+date_default_timezone_set('Etc/UTC');
 
 //Load Composer's autoloader
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 //Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
+$mail = new PHPMailer();
 
 try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
     $mail->isSMTP();                                            
-    $mail->Host       = 'smtp.example.com';                     
-    $mail->SMTPAuth   = false;                                   
-    $mail->Username   = 'user@example.com';                     
-    $mail->Password   = 'secret';                               
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
-    $mail->Port       = 465;                                    
+    $mail->Host       = 'smtp.example.com';           
+    $mail->Port       = 25;                                    
 
     //Recipients
     $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('donald.manning@plus3it.com', 'Test User');     
-    $mail->addAddress('ellen@example.com');               
+    $mail->addAddress('donald.manning@plus3it.com', 'Test User');              
     $mail->addReplyTo('info@example.com', 'Information');   
 
-    //Content
-    $mail->isHTML(true);                                  
+    //Content                                  
     $mail->Subject = 'New Service Request';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->AltBody    = 'This is the HTML message body <b>in bold!</b>';
 
     $mail->send();
     echo 'Message has been sent';
