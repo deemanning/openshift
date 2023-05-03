@@ -30,10 +30,7 @@ try {
     //Content
     $mail->isHTML(true);                                  
     $mail->Subject = 'New Service Request';
-    $mail->Body    = $_POST['teamname'];
-    $mail.->Body    = $_POST['gpocname'];
-    $mail.->Body    = $_POST['keycloakusername'];
-    $mail.->Body    = $_POST['adminusers'];
+    $mail->Body    = $_POST['teamname', 'gpocname', 'keycloakusername', 'adminusers'];
 
     $mail->send();
     echo 'Message has been sent';
