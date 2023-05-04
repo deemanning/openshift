@@ -1,6 +1,6 @@
 <?php
 
-$to = deray2g@yahoo.com;
+$to = {deray2g@yahoo.com};
 
 $subject = Hola;
 
