@@ -6,9 +6,6 @@ use PHPMailer\PHPMailer\SMTP;
 //This should be done in your php.ini, but this is how to do it if you don't have access to that
 date_default_timezone_set('Etc/UTC');
 
-//Load Composer's autoloader
-require '../vendor/autoload.php';
-
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer();
 
