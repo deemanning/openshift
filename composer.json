@@ -34,12 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PHPMailer\\PHPMailer\\": "src/"
+            "PHPMailer/PHPMailer/": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PHPMailer\\Test\\": "test/"
+            "PHPMailer/Test/": "test/"
         }
     },
     "license": "LGPL-2.1-only",
