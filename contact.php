@@ -2,7 +2,7 @@
 
 $to = "deray2g@yahoo.com";
 
-$subject = Hola;
+$subject = "Hola";
 
 $message = "This is a test email.";
 
