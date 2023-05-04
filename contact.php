@@ -1,12 +1,12 @@
 <?php
 
-$to = 'deray2g@yahoo.com';
+$to = deray2g@yahoo.com;
 
-$subject = 'Hola';
+$subject = Hola;
 
-$message = 'This is a test email.';
+$message = This is a test email.;
 
-$retval = mail($to, $subject, $message, [$headers], [$parameters]);
+$retval = mail($to, $subject, $message);
 
 if( $retval == true ) {
     echo "Message sent successfully...";
