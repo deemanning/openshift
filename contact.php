@@ -1,17 +1,19 @@
 <?php
 
-$to = "deray2g@yahoo.com";
+$to = 'deray2g@yahoo.com';
 
-$subject = "Hola";
+$subject = 'Hola';
 
-$message = "This is a test email.";
+$message = 'This is a test email.';
 
-$header = "From: noreply@example.com\r\n";
-$header.= "MIME-Version: 1.0\r\n";
-$header.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-$header.= "X-Priority: 1\r\n";
+$headers  = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+$headers .= "From: ". $from. "\r\n";
+$headers .= "Reply-To: ". $from. "\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
+$headers .= "X-Priority: 1" . "\r\n";
 
-$status = mail($to, $subject, $message, $header);
+$status = mail('deray2g@yahoo.com', $subject, $message, $headers);
 
 if($status)
 {
