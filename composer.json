@@ -2,6 +2,11 @@
     "name": "phpmailer/phpmailer",
     "type": "library",
     "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
     "require": {
         "php": ">=5.5.0",
         "ext-ctype": "*",
@@ -9,6 +14,7 @@
         "ext-hash": "*"
     },
     "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
         "doctrine/annotations": "^1.2.6 || ^1.13.3",
         "php-parallel-lint/php-console-highlighter": "^1.0.0",
         "php-parallel-lint/php-parallel-lint": "^1.3.2",
