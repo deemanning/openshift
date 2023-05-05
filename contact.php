@@ -1,12 +1,12 @@
 <?php
 
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 $to = 'deray2g@yahoo.com';
-
 $from = 'servicesubmission@myserver.com'
-
-$subject = 'Hola';
-
-$message = 'This is a test email.';
+$subject = 'Customer Inquiry';
+$body = "From:" .$name."\r\n E-Mail:" .$email."\r\n Message:\r\n" .$message;
 
 $headers  = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
@@ -17,6 +17,9 @@ $headers .= "X-Priority: 1" . "\r\n";
 
 $status = mail($to, $from, $subject, $message, $headers);
 
+if (isset($_POST['submit'])) 
+{
+   
 if($status)
 {
     echo '<p>Your mail has been sent!</p>';
