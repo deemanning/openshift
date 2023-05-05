@@ -26,5 +26,6 @@ if($status)
 } else {
     echo '<p>Something went wrong. Please try again!</p>';
 }
+}
 
 ?>
