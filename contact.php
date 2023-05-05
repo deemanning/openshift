@@ -1,8 +1,8 @@
 <?php
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+$name = $_POST['teamname'];
+$email = $_POST['gpocname'];
+$message = $_POST['adminusers'];
 $to = 'deray2g@yahoo.com';
 $from = 'servicesubmission@myserver.com'
 $subject = 'Customer Inquiry';
@@ -19,7 +19,7 @@ $status = mail($to, $from, $subject, $message, $headers);
 
 if (isset($_POST['submit'])) 
 {
-   
+
 if($status)
 {
     echo '<p>Your mail has been sent!</p>';
