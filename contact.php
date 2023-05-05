@@ -2,6 +2,8 @@
 
 $to = 'deray2g@yahoo.com';
 
+$from = 'servicesubmission@myserver.com'
+
 $subject = 'Hola';
 
 $message = 'This is a test email.';
