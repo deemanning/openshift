@@ -4,9 +4,18 @@ $name = $_POST['teamname'];
 $email = $_POST['gpocname'];
 $message = $_POST['adminusers'];
 $to = 'deray2g@yahoo.com';
-$from = 'servicesubmission@myserver.com'
+$from = 'servicesubmission@myserver.com';
+$subject = 'Customer Inquiry';
+$body = "From:" .$name."\r\n E-Mail:" .$email."\r\n Message:\r\n" .$message;
 
-$status = mail($to, $from, $message, $name, $email);
+$headers  = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+$headers .= "From: ". $from. "\r\n";
+$headers .= "Reply-To: ". $from. "\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
+$headers .= "X-Priority: 1" . "\r\n";
+
+$status = mail($to, $from, $message, $name, $email, $subject, $body);
 
 if (isset($_POST['submit'])) 
 {
