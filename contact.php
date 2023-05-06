@@ -19,7 +19,7 @@ $headers .= "X-Priority: 1" . "\r\n";
 
 $status= mail('deray2g@yahoo.com', $subject, $body, $from, $headers);
 
-if $_POST['submit']; {
+if "$_POST['submit']"; {
    if ($status)
    { 
        echo '<p>Your message has been sent!</p>';
