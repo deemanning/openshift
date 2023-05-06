@@ -1,12 +1,14 @@
 <?php
 
-$name = $_POST['teamname'];
-$email = $_POST['gpocname'];
-$message = $_POST['adminusers'];
+$message = $_POST['teamname'];
+$message. = $_POST['gpocname'];
+$message. = $_POST['keycloakusername'];
+$message. = $_POST['adminusers'];
+$message. = $_POST['justification'];
 $to = 'deray2g@yahoo.com';
 $from = 'servicesubmission@myserver.com';
 $subject = 'Customer Inquiry';
-$body = "From:" .$name."\r\n E-Mail:" .$email."\r\n Message:\r\n" .$message;
+$body = "From:" .$from."\r\n E-Mail:" .$subject."\r\n Message:\r\n" .$message;
 
 $headers  = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
