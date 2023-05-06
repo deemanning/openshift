@@ -15,17 +15,13 @@ $headers .= "Reply-To: ". $from. "\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 $headers .= "X-Priority: 1" . "\r\n";
 
-$status = mail($to, $subject, $body, $from);
-
-if (isset($_POST['submit'])) 
-{
+$status = mail($to, $subject, $body, $from, $headers);
 
 if($status)
 {
     echo '<p>Your mail has been sent!</p>';
 } else {
     echo '<p>Something went wrong. Please try again!</p>';
-}
 }
 
 ?>
