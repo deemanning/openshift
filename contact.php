@@ -1,10 +1,10 @@
 <?php
 
 $message = $_POST['teamname'];
-$message. = $_POST['gpocname'];
-$message. = $_POST['keycloakusername'];
-$message. = $_POST['adminusers'];
-$message. = $_POST['justification'];
+$message.= $_POST['gpocname'];
+$message.= $_POST['keycloakusername'];
+$message.= $_POST['adminusers'];
+$message.= $_POST['justification'];
 $to = 'deray2g@yahoo.com';
 $from = 'servicesubmission@myserver.com';
 $subject = 'Customer Inquiry';
