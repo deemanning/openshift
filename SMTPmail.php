@@ -13,7 +13,7 @@ class SMTPClient
         $this->subject = $subject;
         $this->body = $body;
 
-        if ($SmtpPort == "") 
+        if ($SmtpPort == "25") 
         {
             $this->PortSMTP = 25;
         }

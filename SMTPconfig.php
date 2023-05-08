@@ -1,6 +1,6 @@
 <?php 
-    $SmtpServer="localhost";
-    $SmtpPort="2525"; //default
+    $SmtpServer="smtp.gmail.com";
+    $SmtpPort="25"; //default
     $SmtpUser="test";
     $SmtpPass="Pass@wd11";
 ?>
