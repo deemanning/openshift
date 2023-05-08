@@ -1,6 +1,6 @@
 <?php 
-    $SmtpServer="deray2manning@gmail.com";
-    $SmtpPort="25"; //default
-    $SmtpUser="deray2manning";
-    $SmtpPass="Googs12345";
+    $SmtpServer="localhost";
+    $SmtpPort="2525"; //default
+    $SmtpUser="testuser";
+    $SmtpPass="Pass@12word";
 ?>
