@@ -29,7 +29,7 @@ class SMTPClient
         $headers = "MIME-Version: 1.0" . $newLine;  
         $headers .= "Content-type: text/html; charset=iso-8859-1" . $newLine;  
 
-        if ($SMTPIN = fsockopen ($this->SmtpServer, $this->PortSMTP));
+        if ($SMTPIN = fsockopen ($this->$SmtpServer, $this->PortSMTP));
         {
             fputs ($SMTPIN, "EHLO ".$HTTP_HOST."\r\n"); 
             $talk["hello"] = fgets ( $SMTPIN, 1024 ); 
