@@ -1,6 +1,6 @@
 <?php 
     $SmtpServer="localhost";
-    $SmtpPort="2525"; //default
+    $SmtpPort="25";
     $SmtpUser="testuser";
     $SmtpPass="Pass@12word";
 ?>
