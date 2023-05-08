@@ -1,3 +1,4 @@
+<?/p
 function send_mail($email='deray2manning@gmail.com', $recipient_name='deray2g@yahoo.com', $message='Testing')
 {
     require("phpmailer/class.phpmailer.php");
@@ -31,3 +32,4 @@ function send_mail($email='deray2manning@gmail.com', $recipient_name='deray2g@ya
 
     echo "Message has been sent";
 }
+?>
